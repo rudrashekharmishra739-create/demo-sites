@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Figure Point | Gym in Malviya Nagar, Jaipur</title>
+<meta name="description" content="The Figure Point gym, Malviya Nagar Jaipur. 4.9 stars, 925 reviews. Strength, cardio, functional training, personal coaching, online classes.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0C0F0A;color:#F2F4EC;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:Impact,'Arial Black',sans-serif;letter-spacing:.01em;font-weight:400}
+.top{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.85rem 5%;background:rgba(12,15,10,.94);border-bottom:3px solid #B8F135;animation:drop .7s ease}
+@keyframes drop{from{transform:translateY(-100%)}to{transform:none}}
+.logo{font-family:Impact,'Arial Black',sans-serif;font-size:1.35rem}.logo span{color:#B8F135}
+.top nav{display:flex;gap:1.1rem}.top nav a{color:#F2F4EC;text-decoration:none;font-size:.88rem;font-weight:600}
+.btn{display:inline-block;background:#B8F135;color:#0C0F0A;font-weight:800;padding:.9rem 2rem;border-radius:10px;text-decoration:none;transition:transform .25s,box-shadow .25s;text-transform:uppercase;font-size:.95rem}
+.btn:hover{transform:translateY(-3px) skewX(-4deg);box-shadow:0 12px 30px rgba(184,241,53,.35)}
+.btn.ghost{background:transparent;border:2px solid #B8F135;color:#B8F135}
+.hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden;background:#0C0F0A}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero .inner{position:relative;max-width:1150px;margin:auto;padding:4rem 5%;width:100%}
+.tag{display:inline-block;background:#B8F135;color:#0C0F0A;font-weight:800;font-size:.85rem;padding:.35rem 1rem;border-radius:8px;margin-bottom:1rem;opacity:0;animation:pop .6s .1s forwards;transform:skewX(-6deg)}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);line-height:.95;margin-bottom:.8rem;opacity:0;animation:rise .7s .25s forwards}
+.hero h1 em{color:#B8F135;font-style:normal}
+.hero p{max-width:32rem;color:#c9cfbc;margin-bottom:1.6rem;font-size:1.1rem;opacity:0;animation:rise .7s .45s forwards}
+.hero .cta-row{opacity:0;animation:rise .7s .65s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{opacity:0;transform:scale(.5) skewX(-6deg)}70%{transform:scale(1.1) skewX(-6deg)}100%{opacity:1;transform:scale(1) skewX(-6deg)}}
+.hero .scroll{position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);color:#B8F135;font-size:.8rem;letter-spacing:.3em;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+.marq{overflow:hidden;white-space:nowrap;background:#B8F135;color:#0C0F0A;padding:.8rem 0;font-weight:800;font-family:Impact,'Arial Black',sans-serif;font-size:1.25rem;letter-spacing:.05em}
+.marq span{display:inline-block;padding-left:100%;animation:marq 20s linear infinite}
+@keyframes marq{to{transform:translateX(-100%)}}
+section{padding:3.6rem 5%;max-width:1150px;margin:auto}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:.2rem;text-transform:uppercase}.sub{color:#9aa08c;margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.prog{background:#151a10;border:1px solid #2a331f;border-radius:16px;padding:1.7rem;transition:transform .3s,border-color .3s;position:relative;overflow:hidden}
+.prog:hover{transform:translateY(-6px);border-color:#B8F135}
+.prog .big{font-family:Impact,'Arial Black',sans-serif;font-size:3rem;color:#232b18;line-height:1}
+.prog h3{margin:.4rem 0;color:#fff}.prog p{color:#a9b09a;font-size:.95rem}
+.coach{display:flex;gap:1rem;background:#151a10;border:1px solid #2a331f;border-radius:16px;padding:1.2rem;align-items:center}
+.coach img{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid #B8F135}
+.coach small{color:#9aa08c}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.plan{background:#151a10;border:1px solid #2a331f;border-radius:18px;padding:2rem;text-align:center}
+.plan.hot{border:2px solid #B8F135;transform:scale(1.03);box-shadow:0 18px 50px rgba(184,241,53,.15)}
+.plan .pr{font-family:Impact,'Arial Black',sans-serif;font-size:2.2rem;color:#B8F135}
+.plan ul{list-style:none;margin:1rem 0;color:#c9cfbc}
+.plan li{padding:.35rem 0}.plan li::before{content:'▸ ';color:#B8F135}
+table.sched{width:100%;border-collapse:collapse;background:#151a10;border-radius:16px;overflow:hidden}
+table.sched th,table.sched td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid #232b18}
+table.sched th{background:#1c2313;color:#B8F135;font-size:.85rem;letter-spacing:.08em}
+table.sched td{color:#dfe3d2}
+.now{color:#B8F135;font-weight:800}
+.trans{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.tcard{border-radius:16px;overflow:hidden;position:relative;min-height:300px;display:flex;align-items:flex-end}
+.tcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tcard div{position:relative;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:2rem 1.4rem 1.4rem;width:100%}
+.tcard b{font-size:1.4rem}.tcard small{color:#B8F135;font-weight:800}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:210px 210px;gap:.7rem}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform .3s}
+.gal img:hover{transform:scale(1.04)}
+.gal img:first-child{grid-row:span 2}
+.rev{background:#151a10;border-left:5px solid #B8F135;border-radius:0 14px 14px 0;padding:1.2rem; color:#dfe3d2}
+.rev b{color:#B8F135}
+.faq details{background:#151a10;border:1px solid #2a331f;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.6rem}
+.faq summary{font-weight:700;cursor:pointer;color:#fff}
+.faq p{color:#a9b09a;margin-top:.5rem}
+.visit{display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem}
+.visit iframe{width:100%;height:100%;min-height:380px;border:0;border-radius:16px;filter:grayscale(.4)}
+.vcard{background:#B8F135;color:#0C0F0A;border-radius:18px;padding:2rem}
+.vcard h3{font-size:1.8rem;margin-bottom:.4rem}
+.vcard .row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.vcard .btn{background:#0C0F0A;color:#B8F135}
+footer{text-align:center;padding:2rem;color:#6d7461;font-size:.9rem}
+.stick{display:none;position:fixed;bottom:0;left:0;right:0;z-index:49;background:#0C0F0A;padding:.5rem;gap:.4rem;border-top:2px solid #B8F135}
+.stick a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;padding:.7rem 0;border-radius:10px;background:#1c2313}
+.stick a.hot{background:#B8F135;color:#0C0F0A}
+@media(max-width:760px){.top nav{display:none}.gal{grid-template-columns:1fr 1fr}.trans{grid-template-columns:1fr}.visit{grid-template-columns:1fr}.stick{display:flex}footer{padding-bottom:5rem}}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">FIGURE<span>POINT</span></div><nav><a href="#programs">Programs</a><a href="#plans">Plans</a><a href="#results">Results</a><a href="#visit">Visit</a></nav><a class="btn" style="padding:.6rem 1.3rem" href="#visit">Free Trial</a></div>
+<div class="hero"><img class="bg" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1400&q=80&auto=format&fit=crop" alt="Gym floor"><div class="inner"><span class="tag">★ 4.9 · 925 REVIEWS · MALVIYA NAGAR</span><h1>STRONGER <em>EVERY REP.</em></h1><p>Jaipur's 4.9-rated iron paradise - strength floors, functional rigs, personal coaching and online classes. First workout free.</p><div class="cta-row"><a class="btn" href="#visit">Claim Free Trial</a> <a class="btn ghost" href="#plans" style="margin-left:.5rem">See Plans</a></div></div><div class="scroll">SCROLL</div></div>
+<div class="marq"><span>NO SHORTCUTS · JUST REPS · STRENGTH · CONDITIONING · PERSONAL COACHING · ONLINE CLASSES ·&nbsp;</span></div>
+<section id="programs"><h2>Train your way</h2><p class="sub">On-site + online classes, open till 10pm.</p><div class="grid"><div class="prog"><div class="big">01</div><h3>Strength Floor</h3><p>Racks, plates, platforms. Heavy done right with coach supervision.</p></div><div class="prog"><div class="big">02</div><h3>Functional Rig</h3><p>Kettlebells, ropes, boxes - athleticism over mirrors.</p></div><div class="prog"><div class="big">03</div><h3>Cardio Deck</h3><p>Treadmills, cycles and rowers with city views.</p></div><div class="prog"><div class="big">04</div><h3>Personal Coaching</h3><p>1-on-1 programming, nutrition and accountability.</p></div><div class="prog"><div class="big">05</div><h3>Group Classes</h3><p>Batch energy on the floor and online every week.</p></div><div class="prog"><div class="big">06</div><h3>Online Coaching</h3><p>Train from home with the same coaches, live.</p></div></div></section>
+<section id="coaches"><h2>Coached, not crowded</h2><p class="sub">Floor trainers who actually watch your form.</p><div class="grid"><div class="coach"><img loading="lazy" src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=300&q=80&auto=format&fit=crop" alt="Coach"><div><h3>Strength Team</h3><small>Powerlifting · form-first</small></div></div><div class="coach"><img loading="lazy" src="https://images.unsplash.com/photo-1594381898411-846e7d193c13?w=300&q=80&auto=format&fit=crop" alt="Coach"><div><h3>Conditioning Team</h3><small>Fat-loss · stamina</small></div></div><div class="coach"><img loading="lazy" src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?w=300&q=80&auto=format&fit=crop" alt="Coach"><div><h3>Personal Coaches</h3><small>1-on-1 · nutrition</small></div></div></div></section>
+<section id="plans"><h2>Membership</h2><p class="sub">Honest plans. Exact fees at the front desk or on call - no hidden charges, pause anytime.</p><div class="plans"><div class="plan"><h3>Monthly</h3><div class="pr">FLEXI</div><ul><li>Full floor access</li><li>1 group class/week</li><li>Locker included</li></ul><a class="btn" href="#visit">Ask Price</a></div><div class="plan hot"><h3>Quarterly</h3><div class="pr">POPULAR</div><ul><li>Everything in Monthly</li><li>Unlimited classes</li><li>Diet chart included</li></ul><a class="btn" href="#visit">Ask Price</a></div><div class="plan"><h3>Personal</h3><div class="pr">1-ON-1</div><ul><li>Dedicated coach</li><li>Custom programming</li><li>Monthly assessments</li></ul><a class="btn" href="#visit">Ask Price</a></div></div></section>
+<section id="results"><h2>Proof, not promises</h2><p class="sub">4.9 from 925 members.</p><div class="trans"><div class="tcard"><img loading="lazy" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80&auto=format&fit=crop" alt="Training"><div><small>★ 5.0 MEMBER STORY</small><br><b>"Down 14kg, form fixed forever."</b></div></div><div class="tcard"><img loading="lazy" src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80&auto=format&fit=crop" alt="Training"><div><small>★ 5.0 MEMBER STORY</small><br><b>"Coaches watch every rep."</b></div></div></div></section>
+<section id="schedule"><h2>Floor hours</h2><div style="overflow-x:auto"><table class="sched"><tr><th></th><th>Morning</th><th>Evening</th></tr><tr><td><b>Mon – Sat</b></td><td>5:30am – 11am <span class="now">· peak coaching</span></td><td>4pm – 10pm <span class="now">· peak coaching</span></td></tr><tr><td><b>Group classes</b></td><td>7am batch</td><td>6:30pm batch</td></tr><tr><td><b>Sunday</b></td><td colspan="2">Active recovery · online only</td></tr></table></div></section>
+<section id="gallery"><h2>The floor</h2><div class="gal"><img loading="lazy" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=700&q=80&auto=format&fit=crop" alt="Gym"><img loading="lazy" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80&auto=format&fit=crop" alt="Weights"><img loading="lazy" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80&auto=format&fit=crop" alt="Training"><img loading="lazy" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&q=80&auto=format&fit=crop" alt="Workout"><img loading="lazy" src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&q=80&auto=format&fit=crop" alt="Cardio"></div></section>
+<section id="reviews"><h2>925 reviews. 4.9 average.</h2><div class="grid"><div class="rev"><b>★★★★★ Member</b><p>"Best gym in Malviya Nagar. Equipment + trainers both top."</p></div><div class="rev"><b>★★★★★ Member</b><p>"Lost weight steadily. Diet chart actually works."</p></div><div class="rev"><b>★★★★★ Member</b><p>"Clean floor, serious lifters, zero attitude."</p></div></div></section>
+<section class="faq"><h2>Questions</h2><details><summary>Is there a free trial?</summary><p>Yes - first workout free. Walk in any morning or evening batch.</p></details><details><summary>Do you offer online classes?</summary><p>Yes - live online batches alongside on-site training.</p></details><details><summary>Is there a second branch?</summary><p>Yes - The Figure Point 2 on Girdhar Marg (4.8★).</p></details></section>
+<section id="visit"><h2>Come lift</h2><p class="sub">Roop Villas UDB Building, A-11, Malviya Nagar, Jaipur · Open till 10pm</p><div class="visit" style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem"><iframe loading="lazy" title="Figure Point map" src="https://www.google.com/maps?q=Malviya+Nagar+Jaipur+gym&output=embed" allowfullscreen style="width:100%;height:100%;min-height:380px;border:0;border-radius:16px"></iframe><div class="vcard" style="background:#B8F135;color:#0C0F0A;border-radius:18px;padding:2rem"><h3 style="font-size:1.8rem">First workout free</h3><p>No card. No pressure. Just show up.</p><div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem"><a class="btn" style="background:#0C0F0A;color:#B8F135" href="https://www.google.com/maps?q=The+Figure+Point+Malviya+Nagar+Jaipur" target="_blank" rel="noopener">Get Directions</a></div></div></div></section>
+<footer style="text-align:center;padding:2rem;color:#6d7461;font-size:.9rem">The Figure Point · Malviya Nagar, Jaipur · © 2026 · Demo site - reply to claim</footer>
+<div class="stick"><a href="#visit">Trial</a><a href="#plans" class="hot">Plans</a><a href="#visit">Directions</a></div>
+</body></html>
