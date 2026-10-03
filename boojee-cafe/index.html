@@ -3,78 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boojee Cafe | Bandra's Happy Corner</title>
-<meta name="description" content="Boojee Cafe, Kantwadi Rd Bandra. 4.0 rated cafe - good coffee, desserts, chill corners.">
+<title>Boojee Cafe | Slow Mornings in Bandra</title>
+<meta name="description" content="Boojee Cafe, Kantwadi Rd Bandra West. 4.4 stars, 4720 reviews. Truffle omelettes, Turkish eggs, avocado toast. Open till 11pm.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#FFF9F1;color:#33231A;line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:Georgia,serif}
-.top{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.9rem 5%;background:#33231Acc;color:#fff;backdrop-filter:blur(8px)}
-.top b{font-family:Georgia,serif;font-size:1.25rem}.top b i{color:#E8A94F;font-style:normal}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#FBF6EC;color:#3A2A1E;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+.top{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.85rem 5%;background:rgba(58,42,30,.94);color:#fff;backdrop-filter:blur(8px)}
+.logo{font-family:Georgia,serif;font-size:1.3rem}.logo i{color:#E5A83D;font-style:normal}
 .top nav{display:flex;gap:1.1rem}.top nav a{color:#fff;text-decoration:none;font-size:.88rem}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 5%;max-width:1150px;margin:auto;min-height:88vh}
-.kick{background:#E8A94F;color:#33231A;font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:20px;display:inline-block;margin-bottom:1rem;letter-spacing:.06em}
-.hero h1{font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.02;margin-bottom:.8rem}
-.hero h1 em{color:#C47A44}
-.hero p{opacity:.8;margin-bottom:1.4rem;max-width:30rem}
-.btn{display:inline-block;background:#33231A;color:#fff;font-weight:700;padding:.85rem 1.8rem;border-radius:999px;text-decoration:none;margin:.25rem .3rem .25rem 0;transition:transform .25s}
-.btn:hover{transform:translateY(-3px) rotate(-1deg)}
-.btn.alt{background:#E8A94F;color:#33231A}
-.collage{position:relative;height:480px}
-.collage img{position:absolute;object-fit:cover;border-radius:20px;box-shadow:0 18px 50px rgba(51,35,26,.25);animation:float 7s ease-in-out infinite}
-.collage img.a{width:62%;height:66%;top:0;left:0}
-.collage img.b{width:46%;height:48%;bottom:0;right:0;animation-delay:-2s}
-.collage img.c{width:34%;height:34%;top:6%;right:4%;animation-delay:-4s;border-radius:50%}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(1deg)}}
-.marq{overflow:hidden;white-space:nowrap;background:#33231A;color:#F6D9A8;padding:.8rem 0;font-weight:800;letter-spacing:.05em}
-.marq span{display:inline-block;padding-left:100%;animation:marq 20s linear infinite}
+.btn{display:inline-block;background:#3A2A1E;color:#fff;font-weight:700;padding:.85rem 1.9rem;border-radius:999px;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(58,42,30,.3)}
+.btn.sun{background:linear-gradient(135deg,#E5A83D,#D96C3D);color:#fff}
+.sunrise{position:relative;overflow:hidden;background:linear-gradient(180deg,#F6DFAE 0%,#FBF6EC 70%)}
+.sunrise::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#F2B950 0%,#F2B950 45%,rgba(242,185,80,0) 72%);animation:sunrise 5s ease-in-out infinite alternate}
+@keyframes sunrise{to{transform:translateX(-50%) translateY(26px)}}
+.hero{position:relative;max-width:1150px;margin:auto;padding:4.5rem 5% 3rem;text-align:center}
+.stars{display:inline-block;background:#fff;border:2px solid #3A2A1E;border-radius:999px;padding:.35rem 1rem;font-weight:800;font-size:.85rem;box-shadow:4px 4px 0 #3A2A1E;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;margin-bottom:.8rem}
+.hero h1 em{color:#C47A2E}
+.hero p{max-width:34rem;margin:0 auto 1.6rem;opacity:.8;font-size:1.1rem}
+.ticker{overflow:hidden;white-space:nowrap;background:#3A2A1E;color:#F2D8A6;padding:.75rem 0;font-weight:700}
+.ticker span{display:inline-block;padding-left:100%;animation:marq 22s linear infinite}
 @keyframes marq{to{transform:translateX(-100%)}}
 section{padding:3.4rem 5%;max-width:1150px;margin:auto}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.3rem}.sub{opacity:.65;margin-bottom:1.6rem}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;counter-reset:st}
-.step{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 10px 28px rgba(51,35,26,.1);position:relative;transition:transform .3s}
-.step:hover{transform:translateY(-6px)}
-.step::before{counter-increment:st;content:"0" counter(st);font-family:Georgia,serif;font-size:2.4rem;color:#E8A94F;font-weight:700}
-.cats{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}
-.cats button{border:2px solid #33231A;background:transparent;padding:.5rem 1.2rem;border-radius:999px;font-weight:700;cursor:pointer;font-size:.9rem}
-.cats button.on{background:#33231A;color:#fff}
-.pane{display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem}
-.pane.on{display:grid;animation:fade .4s}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
-.dish{background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 6px 18px rgba(51,35,26,.08)}
-.dish b{font-size:1.05rem}.dish small{opacity:.6}
-.tilt{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.tilt img{width:100%;height:260px;object-fit:cover;border-radius:20px;transition:transform .35s}
-.tilt img:nth-child(odd){transform:rotate(-1.5deg)}.tilt img:nth-child(even){transform:rotate(1.5deg)}
-.tilt img:hover{transform:rotate(0) scale(1.03)}
-.quotes{background:#33231A;color:#F6E7C8;border-radius:28px;padding:3rem 2rem;text-align:center;margin:1rem 5%}
-.quotes blockquote{font-family:Georgia,serif;font-size:clamp(1.2rem,3vw,1.8rem);min-height:3.4em;transition:opacity .5s}
-.quotes small{opacity:.6}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:stretch}
-.visit iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:20px}
-.vcard{background:#fff;border-radius:20px;padding:1.8rem;box-shadow:0 10px 28px rgba(51,35,26,.1)}
-.vcard table{width:100%;border-collapse:collapse;margin:.8rem 0}
-.vcard td{padding:.4rem 0;border-bottom:1px dashed #d9c4a3}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:.2rem}.sub{opacity:.65;margin-bottom:1.8rem}
+.arc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.moment{background:#fff;border-radius:22px;padding:1.6rem;box-shadow:0 12px 30px rgba(58,42,30,.1);position:relative;overflow:hidden;transition:transform .3s}
+.moment:hover{transform:translateY(-6px)}
+.moment .t{font-family:Georgia,serif;font-size:.95rem;color:#C47A2E;font-weight:700;letter-spacing:.08em}
+.moment h3{margin:.3rem 0}
+.board{background:#3A2A1E;color:#F6E8CE;border-radius:26px;padding:2.4rem 2rem;box-shadow:0 20px 60px rgba(58,42,30,.35)}
+.board h2{color:#F2B950}
+.cats{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.2rem 0}
+.cats button{border:2px solid #F2B950;background:transparent;color:#F6E8CE;padding:.5rem 1.2rem;border-radius:999px;font-weight:700;cursor:pointer}
+.cats button.on{background:#F2B950;color:#3A2A1E}
+.pane{display:none;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.7rem}
+.pane.on{display:grid;animation:fade .45s}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1}}
+.dish{background:rgba(255,255,255,.06);border:1px solid rgba(242,185,80,.4);border-radius:14px;padding:.95rem 1.1rem;transition:transform .25s,background .25s}
+.dish:hover{transform:scale(1.02);background:rgba(255,255,255,.1)}
+.dish b{font-size:1.02rem}.dish small{opacity:.65}
+.dish .tag{display:inline-block;font-size:.72rem;font-weight:800;background:#F2B950;color:#3A2A1E;border-radius:8px;padding:.1rem .5rem;margin-left:.4rem;vertical-align:middle}
+.wall{columns:3 240px;column-gap:1rem}
+.note{background:#fff;border-radius:16px;padding:1.2rem;margin-bottom:1rem;break-inside:avoid;box-shadow:0 8px 22px rgba(58,42,30,.1)}
+.note b{color:#C47A2E}
+.pics{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:.8rem}
+.pics img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.pics img:first-child{grid-row:span 2}
+.visit{display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem}
+.visit iframe{width:100%;height:100%;min-height:380px;border:0;border-radius:20px;box-shadow:0 12px 30px rgba(58,42,30,.15)}
+.vcard{background:#fff;border-radius:20px;padding:1.8rem;box-shadow:0 12px 30px rgba(58,42,30,.12)}
+.vcard table{width:100%;border-collapse:collapse;margin:.6rem 0}
+.vcard td{padding:.4rem 0;border-bottom:1px dashed #d9c49a}
 footer{text-align:center;padding:2rem;opacity:.7;font-size:.9rem}
-@media(max-width:700px){.hero{grid-template-columns:1fr;min-height:auto}.collage{height:340px}.top nav{display:none}.visit{grid-template-columns:1fr}}
+@media(max-width:760px){.top nav{display:none}.pics{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.pics img:first-child{grid-row:span 1;grid-column:span 2}.visit{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="top"><b>Boojee <i>Cafe</i></b><nav><a href="#story">Story</a><a href="#menu">Menu</a><a href="#gallery">Vibe</a><a href="#visit">Visit</a></nav><a class="btn alt" style="padding:.55rem 1.2rem" href="#visit">Visit Us</a></div>
-<div class="hero"><div><span class="kick">⭐ 4.0 · 120 reviews · Bandra</span><h1>Coffee first, <em>everything else</em> after.</h1><p>Boojee Cafe on Kantwadi Road - your neighbourhood corner for slow mornings, sweet treats and good playlists. Come as you are.</p><a class="btn" href="#menu">See the Menu</a><a class="btn alt" href="#visit">Find the Corner</a></div>
-<div class="collage"><img class="a" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&auto=format&fit=crop" alt="Cafe interior"><img class="b" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop" alt="Coffee"><img class="c" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop" alt="Latte art"></div></div>
-<div class="marq"><span>fresh brews · honest bakes · good playlists · slow mornings · fresh brews · honest bakes · good playlists · slow mornings ·&nbsp;</span></div>
-<section id="story"><h2>How a Boojee morning goes</h2><p class="sub">Three steps. Zero rush.</p><div class="steps"><div class="step"><h3>Walk in</h3><p>Grab the sunny corner table. Wifi's fast, playlist's better.</p></div><div class="step"><h3>Pick your brew</h3><p>Espresso to cold brews, plus bakes from the counter.</p></div><div class="step"><h3>Stay awhile</h3><p>Work, sketch, gossip - nobody watches the clock here.</p></div></div></section>
-<section id="menu"><h2>Menu</h2><p class="sub">Tap a category. Prices on the counter board in-store.</p><div class="cats"><button class="on" data-p="p1">Coffee</button><button data-p="p2">Brunch</button><button data-p="p3">Bakes &amp; Desserts</button></div>
-<div class="pane on" id="p1"><div class="dish"><div><b>Espresso</b><br><small>Short, strong, honest</small></div></div><div class="dish"><div><b>Cappuccino</b><br><small>Classic foam cap</small></div></div><div class="dish"><div><b>Cafe Latte</b><br><small>Silky and forgiving</small></div></div><div class="dish"><div><b>Cold Brew</b><br><small>18-hour steep</small></div></div></div>
-<div class="pane" id="p2"><div class="dish"><div><b>Masala Omelette + Toast</b><br><small>Morning regular</small></div></div><div class="dish"><div><b>Pesto Pasta</b><br><small>Weekday hero</small></div></div><div class="dish"><div><b>Club Sandwich</b><br><small>Triple-stacked</small></div></div><div class="dish"><div><b>Peri Peri Fries</b><br><small>Shareable (or not)</small></div></div></div>
-<div class="pane" id="p3"><div class="dish"><div><b>Butter Croissant</b><br><small>Flaky mornings</small></div></div><div class="dish"><div><b>Choco Truffle Pastry</b><br><small>Counter legend</small></div></div><div class="dish"><div><b>Banana Walnut Cake</b><br><small>With filter coffee</small></div></div><div class="dish"><div><b>Affogato</b><br><small>Espresso meets vanilla</small></div></div></div></section>
-<section id="gallery"><h2>The vibe</h2><p class="sub">Sunlight, wood and caffeine.</p><div class="tilt"><img loading="lazy" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80&auto=format&fit=crop" alt="Seating"><img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format&fit=crop" alt="Counter"><img loading="lazy" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80&auto=format&fit=crop" alt="Brewing"></div></section>
-<div class="quotes"><blockquote id="qq">"My second office. The cold brew never misses."</blockquote><small>— a Bandra regular · 4.0 from 120 reviews</small></div>
-<section id="visit"><h2>Visit the corner</h2><p class="sub">Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai</p><div class="visit"><iframe loading="lazy" title="Boojee Cafe map" src="https://www.google.com/maps?q=Boojee%20Cafe%20Kantwadi%20Road%20Bandra%20Mumbai&output=embed" allowfullscreen></iframe><div class="vcard"><h3>Good to know</h3><table><tr><td>Hours</td><td style="text-align:right"><b>9am – 11pm</b></td></tr><tr><td>Best for</td><td style="text-align:right">Work, catch-ups</td></tr><tr><td>Try</td><td style="text-align:right">Cold brew + croissant</td></tr></table><br><a class="btn" href="https://www.google.com/maps?q=Boojee%20Cafe%20Kantwadi%20Road%20Bandra%20Mumbai" target="_blank" rel="noopener">Get Directions</a></div></div></section>
-<footer>Boojee Cafe · Kantwadi Rd, Bandra · © 2026 · Demo site - reply to claim</footer>
+<div class="top"><div class="logo">Boojee <i>Cafe</i></div><nav><a href="#day">The Day</a><a href="#menu">Menu</a><a href="#love">Love</a><a href="#visit">Visit</a></nav><a class="btn sun" style="padding:.55rem 1.2rem" href="#visit">Visit Us</a></div>
+<div class="sunrise"><div class="hero"><div><span class="stars">⭐ 4.4 · 4,720 reviews · Bandra West</span><h1>Slow mornings, <em>done right.</em></h1><p>Kantwadi Road's sunlit corner for truffle omelettes, Turkish eggs and iced cortados - loved by half of Bandra.</p><a class="btn" href="#menu">See the Menu</a> <a class="btn sun" href="#visit">Plan a Morning</a></div></div></div>
+<div class="ticker"><span>truffle &amp; smoked cheddar omelette · iced cortado · turkish eggs · avocado toast · hash browns · eggs benedict ·&nbsp;</span></div>
+<section id="day"><h2>A Boojee day, hour by hour</h2><p class="sub">Open till 11pm. The light is best before ten.</p><div class="arc"><div class="moment"><div class="t">8 AM</div><h3>First pour</h3><p>Shutters up, cortados pulling, croissants warming. Regulars get the window seats.</p></div><div class="moment"><div class="t">10 AM</div><h3>Brunch rush</h3><p>Turkish eggs and truffle omelettes fly out. Worth the short wait.</p></div><div class="moment"><div class="t">4 PM</div><h3>Slow hours</h3><p>Laptops open, iced coffees refill. Nobody hurries you.</p></div><div class="moment"><div class="t">8 PM</div><h3>Golden close</h3><p>Hot chocolate weather. Last orders, long goodbyes.</p></div></div></section>
+<section id="menu"><div class="board"><h2>Crowd Favourites</h2><p style="opacity:.7">From 4,720 reviews + the popular board. ~₹600 per person · full menu &amp; prices in-store and on their ordering page.</p><div class="cats"><button class="on" data-p="p1">Breakfast Stars</button><button data-p="p2">Coffee &amp; More</button><button data-p="p3">All-Day Plates</button></div>
+<div class="pane on" id="p1"><div class="dish"><div><b>Truffle &amp; Smoked Cheddar Omelette</b> <span class="tag">MOST LOVED</span><br><small>The plate 40+ reviews mention</small></div></div><div class="dish"><div><b>Turkish Eggs</b><br><small>Toasted crunchy bread, reviewed twice over</small></div></div><div class="dish"><div><b>Eggs Benedict</b><br><small>Brunch classic, done properly</small></div></div><div class="dish"><div><b>Avocado Toast</b><br><small>40 mentions. Forty.</small></div></div></div>
+<div class="pane" id="p2"><div class="dish"><div><b>Iced Cortado</b> <span class="tag">MOST LOVED</span><br><small>The order to beat</small></div></div><div class="dish"><div><b>Cappuccino</b><br><small>Silky regular</small></div></div><div class="dish"><div><b>Iced Coffee</b><br><small>Slow-afternoon fuel</small></div></div><div class="dish"><div><b>Hot Chocolate</b><br><small>Evening comfort</small></div></div></div>
+<div class="pane" id="p3"><div class="dish"><div><b>Cheese Hashbrown + BBQ Chicken</b><br><small>"Ordered it twice" energy</small></div></div><div class="dish"><div><b>Classic Chicken Sandwich</b><br><small>Crunchy, toasted, gone fast</small></div></div><div class="dish"><div><b>Veggie Burger</b><br><small>Photo-famous</small></div></div><div class="dish"><div><b>Butter Croissant</b><br><small>Morning essential</small></div></div></div></div></section>
+<section id="love"><h2>4720 reviews can't be wrong</h2><p class="sub">A few of them, unedited in spirit.</p><div class="wall"><div class="note"><b>★★★★★ Erica D'souza</b><p>"Welcoming morning, ordered quite a bit - all lovely."</p></div><div class="note"><b>★★★★★ Karna Joshi</b><p>"Really lovely experience at Boojee, Bandra West."</p></div><div class="note"><b>★★★★★ Regular</b><p>"Food, service, ambience - everything awesome."</p></div><div class="note"><b>★★★★☆ Guest</b><p>"Turkish eggs with crunchy toasted bread. Nice."</p></div></div></section>
+<section id="shots"><h2>Sunlight &amp; crumbs</h2><div class="pics"><img loading="lazy" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=900&q=80&auto=format&fit=crop" alt="Cafe interior"><img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format&fit=crop" alt="Coffee"><img loading="lazy" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80&auto=format&fit=crop" alt="Bakes"><img loading="lazy" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80&auto=format&fit=crop" alt="Seating"><img loading="lazy" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format&fit=crop" alt="Latte"></div></section>
+<section id="visit"><h2>Come hungry</h2><p class="sub">Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra West 400050 · 099302 03882</p><div class="visit"><iframe loading="lazy" title="Boojee Cafe map" src="https://www.google.com/maps?q=Boojee%20Cafe%20Kantwadi%20Road%20Bandra%20West%20Mumbai&output=embed" allowfullscreen></iframe><div class="vcard"><h3>Good to know</h3><table><tr><td>Hours</td><td style="text-align:right"><b>Till 11pm</b></td></tr><tr><td>Budget</td><td style="text-align:right">~₹600 per person</td></tr><tr><td>Dine-in · Drive-through · Delivery</td><td style="text-align:right">Yes</td></tr><tr><td>Vibe</td><td style="text-align:right">LGBTQ+ friendly</td></tr></table><br><a class="btn" href="tel:09930203882">Call 099302 03882</a> <a class="btn sun" href="https://www.google.com/maps?q=Boojee%20Cafe%20Kantwadi%20Road%20Bandra%20West%20Mumbai" target="_blank" rel="noopener">Directions</a></div></div></section>
+<footer>Boojee Cafe · Kantwadi Rd, Bandra West · © 2026 · Demo site - reply to claim</footer>
 <script>
 document.querySelectorAll('.cats button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cats button').forEach(function(b){b.classList.remove('on')});btn.classList.add('on');document.querySelectorAll('.pane').forEach(function(p){p.classList.remove('on')});document.getElementById(btn.getAttribute('data-p')).classList.add('on')})});
-var qs=["My second office. The cold brew never misses.","Cutest corner in Bandra, full stop.","Croissant + cappuccino = perfect evening.","Great playlists, greater coffee."];var qi=0;var qel=document.getElementById('qq');setInterval(function(){qel.style.opacity=0;setTimeout(function(){qi=(qi+1)%qs.length;qel.innerText='"'+qs[qi]+'"';qel.style.opacity=1},450)},4200);
 </script></body></html>
