@@ -3,83 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leaping Windows | Software That Ships</title>
-<meta name="description" content="Leaping Windows, Andheri Mumbai. 4.6 rated software company - web development, UI/UX, cloud.">
+<title>Leaping Windows | Comic Cafe & Library, Versova</title>
+<meta name="description" content="Leaping Windows - India's beloved comic book cafe & library in Versova. 4.5 stars, 2216 reviews. 5000+ comics, cafe, bat-cave reading room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#0B1020;color:#E8ECF4;line-height:1.65;overflow-x:hidden}
-h1,h2,h3{line-height:1.12}
-.wrap{max-width:1150px;margin:auto;padding:0 5%}
-.top{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid #26314d}
-.top .in{max-width:1150px;margin:auto;padding:.85rem 5%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;font-size:1.2rem}.logo i{color:#38E1C6;font-style:normal}
-.top nav{display:flex;gap:1.2rem}.top nav a{color:#cfd6e4;text-decoration:none;font-size:.9rem}
-.cta{display:inline-block;background:#38E1C6;color:#06231f;font-weight:800;padding:.85rem 1.9rem;border-radius:10px;text-decoration:none;transition:transform .25s,box-shadow .25s}
-.cta:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(56,225,198,.35)}
-.cta.dim{background:transparent;border:2px solid #38E1C6;color:#38E1C6}
-.hero{max-width:1150px;margin:auto;padding:4rem 5% 3rem;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;min-height:88vh}
-.pill{display:inline-block;border:1px solid #38E1C6;color:#38E1C6;font-size:.8rem;font-weight:700;padding:.35rem .9rem;border-radius:999px;margin-bottom:1rem;letter-spacing:.05em}
-.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:.9rem}
-.hero h1 u{color:#38E1C6;text-decoration-thickness:5px}
-.hero p{color:#a9b4c9;margin-bottom:1.6rem;max-width:32rem}
-.term{background:#060a17;border:1px solid #26314d;border-radius:16px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.term .bar{display:flex;gap:.45rem;padding:.7rem .9rem;background:#131a30}
-.term .bar i{width:11px;height:11px;border-radius:50%;background:#3b4763}
-.term .bar i:first-child{background:#ff5f57}
-.term pre{padding:1.3rem 1.2rem;font-family:Consolas,monospace;font-size:.92rem;color:#9fe8d8;white-space:pre-wrap;min-height:280px}
-.term .cur{display:inline-block;width:9px;height:1.1em;background:#38E1C6;vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.band{border-top:1px solid #26314d;border-bottom:1px solid #26314d;background:#0e1430}
-.band .in{max-width:1150px;margin:auto;padding:1.6rem 5%;display:flex;gap:2rem;flex-wrap:wrap}
-.band b{font-size:1.6rem;color:#fff;display:block}.band span{color:#8b96ad;font-size:.85rem}
-section{padding:3.6rem 0}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.3rem}.sub{color:#8b96ad;margin-bottom:1.8rem}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
-.svc{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.6rem;transition:transform .3s,border-color .3s}
-.svc:hover{transform:translateY(-6px);border-color:#38E1C6}
-.svc .n{font-family:Consolas,monospace;color:#38E1C6;font-size:.85rem}
-.svc h3{margin:.5rem 0}.svc p{color:#a9b4c9;font-size:.95rem}
-.tl{position:relative;margin:1rem 0 0 8px;padding-left:2rem;border-left:2px solid #26314d}
-.tl div{position:relative;padding-bottom:1.6rem}
-.tl div::before{content:'';position:absolute;left:-2.65rem;top:.3rem;width:14px;height:14px;border-radius:50%;background:#38E1C6;box-shadow:0 0 0 5px rgba(56,225,198,.15)}
-.tl h3{color:#fff}.tl p{color:#a9b4c9}
-.chips{display:flex;gap:.6rem;flex-wrap:wrap}
-.chips span{font-family:Consolas,monospace;font-size:.85rem;border:1px solid #38E1C6;color:#9fe8d8;padding:.4rem .9rem;border-radius:8px}
-.models{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
-.model{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.8rem}
-.model.hot{border:2px solid #38E1C6;transform:scale(1.02)}
-.model .pr{font-size:1.9rem;font-weight:800;color:#fff}
-.model ul{list-style:none;margin:1rem 0;color:#a9b4c9}
-.model li{padding:.3rem 0}.model li::before{content:'✓ ';color:#38E1C6}
-.slide{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:2.4rem;text-align:center}
-.slide blockquote{font-size:clamp(1.1rem,2.6vw,1.5rem);min-height:3.6em;transition:opacity .5s}
-.slide small{color:#8b96ad}
-form{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.8rem;display:grid;gap:.8rem}
-form input,form textarea{background:#0b1020;border:1px solid #33405f;border-radius:10px;padding:.85rem;color:#fff;font:inherit}
-form input:focus,form textarea:focus{outline:none;border-color:#38E1C6}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
-.map{border:1px solid #26314d;border-radius:16px;overflow:hidden}
-.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.3)}
-footer{border-top:1px solid #26314d;text-align:center;padding:2rem;color:#8b96ad;font-size:.9rem}
-@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto}.top nav{display:none}.split{grid-template-columns:1fr}}
+body{font-family:'Comic Neue','Segoe UI',sans-serif;background:#F4D35E;color:#1D1D1D;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.bang{font-family:'Bangers',cursive;letter-spacing:.03em;font-weight:400}
+.top{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.7rem 5%;background:#1D1D1D;color:#fff;border-bottom:4px solid #EE964B}
+.logo{font-family:'Bangers',cursive;font-size:1.5rem;letter-spacing:.05em}.logo span{color:#EE964B}
+.top nav{display:flex;gap:1.1rem}.top nav a{color:#fff;text-decoration:none;font-size:.9rem;font-weight:700}
+.btn{display:inline-block;background:#EE964B;color:#1D1D1D;font-weight:800;padding:.85rem 1.9rem;border:3px solid #1D1D1D;border-radius:14px;text-decoration:none;box-shadow:5px 5px 0 #1D1D1D;transition:transform .2s,box-shadow .2s;font-size:1rem}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 #1D1D1D}
+.btn.dark{background:#1D1D1D;color:#F4D35E}
+.hero{position:relative;padding:3.5rem 5% 4rem;max-width:1150px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;min-height:88vh}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(#1D1D1D 1.3px,transparent 1.4px);background-size:22px 22px;opacity:.12;pointer-events:none}
+.burst{display:inline-block;background:#D64045;color:#fff;font-family:'Bangers',cursive;font-size:1.1rem;letter-spacing:.06em;padding:.7rem 1.4rem;clip-path:polygon(50% 0%,61% 12%,75% 6%,82% 20%,97% 22%,95% 38%,100% 50%,95% 62%,97% 78%,82% 80%,75% 94%,61% 88%,50% 100%,39% 88%,25% 94%,18% 80%,3% 78%,5% 62%,0% 50%,5% 38%,3% 22%,18% 20%,25% 6%,39% 12%);margin-bottom:1rem;animation:spin-pulse 3s ease-in-out infinite}
+@keyframes spin-pulse{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(2deg) scale(1.06)}}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);line-height:.95;margin-bottom:.8rem}
+.hero h1 .hl{background:#1D1D1D;color:#F4D35E;padding:0 .4rem;display:inline-block;transform:rotate(-1.5deg)}
+.hero p{font-size:1.1rem;max-width:30rem;margin-bottom:1.5rem}
+.powpanel{background:#fff;border:4px solid #1D1D1D;border-radius:22px;box-shadow:10px 10px 0 #1D1D1D;padding:1.4rem;transform:rotate(1.5deg);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:rotate(1.5deg) translateY(0)}50%{transform:rotate(1.5deg) translateY(-12px)}}
+.powpanel img{width:100%;height:300px;object-fit:cover;border-radius:12px;border:3px solid #1D1D1D}
+.speech{position:relative;background:#fff;border:3px solid #1D1D1D;border-radius:16px;padding:.7rem 1rem;font-weight:700;margin-top:1rem;display:inline-block}
+.speech::before{content:'';position:absolute;top:-14px;left:40px;border:7px solid transparent;border-bottom-color:#1D1D1D}
+.marq{overflow:hidden;white-space:nowrap;background:#1D1D1D;color:#F4D35E;padding:.8rem 0;font-family:'Bangers',cursive;font-size:1.3rem;letter-spacing:.08em;border-top:4px solid #1D1D1D;border-bottom:4px solid #1D1D1D}
+.marq span{display:inline-block;padding-left:100%;animation:marq 20s linear infinite}
+@keyframes marq{to{transform:translateX(-100%)}}
+section{padding:3.4rem 5%;max-width:1150px;margin:auto}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:.2rem}.sub{opacity:.7;margin-bottom:1.6rem;font-weight:700}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.book{background:#fff;border:4px solid #1D1D1D;border-radius:16px;padding:1.4rem;box-shadow:6px 6px 0 #1D1D1D;transition:transform .25s}
+.book:hover{transform:translateY(-6px) rotate(-1deg)}
+.book .cov{font-family:'Bangers',cursive;font-size:2.2rem;margin-bottom:.4rem}
+.book.b1 .cov{color:#D64045}.book.b2 .cov{color:#2A9D8F}.book.b3 .cov{color:#E9C46A}.book.b4 .cov{color:#4361EE}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.plan{background:#1D1D1D;color:#fff;border:4px solid #1D1D1D;border-radius:18px;padding:1.8rem;box-shadow:6px 6px 0 #EE964B}
+.plan.hot{background:#D64045;box-shadow:6px 6px 0 #1D1D1D;transform:scale(1.02)}
+.plan .pr{font-family:'Bangers',cursive;font-size:2.4rem;letter-spacing:.04em}
+.plan ul{list-style:none;margin:1rem 0}
+.plan li{padding:.3rem 0}.plan li::before{content:'★ ';color:#EE964B}
+.dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem}
+.dish{background:#fff;border:3px solid #1D1D1D;border-radius:14px;padding:.9rem 1.1rem;box-shadow:4px 4px 0 #1D1D1D}
+.dish b{font-size:1.05rem}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem}
+.strip img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:4px solid #1D1D1D;transition:transform .3s}
+.strip img:nth-child(odd){transform:rotate(-2deg)}.strip img:nth-child(even){transform:rotate(2deg)}
+.strip img:hover{transform:rotate(0) scale(1.04);z-index:2}
+.quotes{background:#1D1D1D;color:#F4D35E;border-radius:26px;padding:2.8rem 2rem;text-align:center;margin:1rem 5%;border:4px solid #1D1D1D}
+.quotes blockquote{font-family:'Bangers',cursive;font-size:clamp(1.4rem,3.4vw,2.2rem);letter-spacing:.04em;min-height:2.8em;transition:opacity .5s}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.visit iframe{width:100%;height:100%;min-height:360px;border:4px solid #1D1D1D;border-radius:18px}
+.vcard{background:#fff;border:4px solid #1D1D1D;border-radius:18px;padding:1.6rem;box-shadow:6px 6px 0 #1D1D1D}
+.vcard table{width:100%;border-collapse:collapse;margin:.6rem 0}
+.vcard td{padding:.4rem 0;border-bottom:2px dashed #d9c48f}
+footer{text-align:center;padding:2rem;font-weight:700}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto}.top nav{display:none}.visit{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="top"><div class="in"><div class="logo">Leaping<i>Windows</i></div><nav><a href="#work">Services</a><a href="#process">Process</a><a href="#models">Engage</a><a href="#contact">Contact</a></nav><a class="cta" style="padding:.6rem 1.3rem" href="#contact">Start a Project</a></div></div>
-<div class="hero"><div><span class="pill">★ 4.6 · 89 reviews · Andheri, Mumbai</span><h1>Software that <u>ships</u>, not slides.</h1><p>Leaping Windows builds websites, web apps and cloud setups for growing businesses - scoped tightly, delivered on time, supported after launch.</p><a class="cta" href="#contact">Start a Project</a> <a class="cta dim" href="#work" style="margin-left:.5rem">See Services</a></div>
-<div class="term"><div class="bar"><i></i><i></i><i></i></div><pre id="code"></pre></div></div>
-<div class="band"><div class="in"><div><b>40+</b><span>projects shipped</span></div><div><b>4.6★</b><span>client rating</span></div><div><b>89</b><span>verified reviews</span></div><div><b>7d</b><span>avg. first delivery</span></div></div></div>
-<div class="wrap"><section id="work"><h2>What we ship</h2><p class="sub">Four lanes. No bloated retainers.</p><div class="cards"><div class="svc"><div class="n">01</div><h3>Web Development</h3><p>Fast marketing sites and web apps - mobile-first, SEO-ready.</p></div><div class="svc"><div class="n">02</div><h3>UI/UX Design</h3><p>Interfaces your customers understand on first glance.</p></div><div class="svc"><div class="n">03</div><h3>Cloud Setup</h3><p>Hosting, domains, email and deploys configured right.</p></div><div class="svc"><div class="n">04</div><h3>Care Plans</h3><p>Updates, backups and small changes, handled monthly.</p></div></div>
-<h2 style="margin-top:2.6rem">Stack</h2><div class="chips"><span>HTML/CSS/JS</span><span>React</span><span>Node</span><span>Python</span><span>AWS</span><span>GitHub</span></div></section>
-<section id="process"><h2>How a project runs</h2><p class="sub">You always know what's next.</p><div class="tl"><div><h3>Day 1 - Scope call</h3><p>30 minutes. Fixed quote, fixed date. No jargon.</p></div><div><h3>Day 2-4 - Design draft</h3><p>Clickable preview in your browser. Two revision rounds.</p></div><div><h3>Day 5-7 - Build</h3><p>We code, you watch progress on a live staging link.</p></div><div><h3>Launch - Handover</h3><p>Domain, email, analytics connected. You own everything.</p></div></div></section>
-<section id="models"><h2>Ways to engage</h2><div class="models"><div class="model"><h3>Landing Page</h3><div class="pr">₹9,999</div><ul><li>5-section site</li><li>Mobile-first</li><li>Contact + map</li><li>7-day delivery</li></ul><a class="cta" href="#contact">Choose</a></div><div class="model hot"><h3>Business Site</h3><div class="pr">₹19,999</div><ul><li>Everything in Landing</li><li>Blog + gallery</li><li>WhatsApp + forms</li><li>Basic SEO</li></ul><a class="cta" href="#contact">Choose</a></div><div class="model"><h3>Care Plan</h3><div class="pr">₹2,999/mo</div><ul><li>Updates + backups</li><li>Content changes</li><li>Uptime watch</li><li>Cancel anytime</li></ul><a class="cta" href="#contact">Choose</a></div></div></section>
-<section id="voices"><h2>Clients say</h2><div class="slide"><blockquote id="qq">"Delivered in six days. Our old site took six months."</blockquote><small>— verified client · 4.6 average</small></div></section>
-<section id="contact"><h2>Start a project</h2><p class="sub">Tell us what you need. Reply within one business day.</p><div class="split"><form id="qf"><input required placeholder="Your name" id="qn"><input required placeholder="Email" type="email" id="qe"><textarea required placeholder="What should we build?" rows="5" id="qm"></textarea><button class="cta" type="submit" style="border:none;cursor:pointer">Send via Email App</button></form><div class="map"><iframe loading="lazy" title="Leaping Windows map" src="https://www.google.com/maps?q=Leaping%20Windows%20Andheri%20Mumbai&output=embed" allowfullscreen></iframe></div></div></section></div>
-<footer>Leaping Windows · Andheri, Mumbai · © 2026 · Demo site - reply to claim</footer>
+<div class="top"><div class="logo">LEAPING <span>WINDOWS</span></div><nav><a href="#shelf">Library</a><a href="#plans">Reading</a><a href="#cafe">Cafe</a><a href="#visit">Visit</a></nav><a class="btn" style="padding:.55rem 1.2rem" href="#visit">Visit Us</a></div>
+<div class="hero"><div><span class="burst">★ 4.5 · 2216 reviews ★</span><h1>READ. MUNCH. <span class="hl">REPEAT!</span></h1><p>India's beloved comic-book cafe &amp; library in Versova - 5000+ comics, manga &amp; graphic novels downstairs in the Bat-Cave, loaded nachos upstairs.</p><a class="btn" href="#shelf">Browse the Shelves</a> <a class="btn dark" href="#visit">Find the Cave</a></div>
+<div class="powpanel"><img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&q=80&auto=format&fit=crop" alt="Comic books"><div class="speech">5000+ comics waiting. No fees for drooling!</div></div></div>
+<div class="marq"><span>MARVEL · DC · MANGA · INDIE · COFFEE · NACHOS · BAT-CAVE · MARVEL · DC · MANGA · INDIE · COFFEE · NACHOS · BAT-CAVE ·&nbsp;</span></div>
+<section id="shelf"><h2>The Shelves</h2><p class="sub">123 reviewers came for the comics. Stay for everything.</p><div class="shelf"><div class="book b1"><div class="cov">POW!</div><h3>Superhero</h3><p>Marvel + DC wall-to-wall. Avengers to X-Men, Batman to Saga-adjacent greatness.</p></div><div class="book b2"><div class="cov">ドン!</div><h3>Manga</h3><p>Shonen to slice-of-life. A whole Bat-Cave corner of Japanese shelves.</p></div><div class="book b3"><div class="cov">ZAP!</div><h3>Indie &amp; Graphic Novels</h3><p>Prize-winners, memoirs, weird little masterpieces.</p></div><div class="book b4"><div class="cov">WOW!</div><h3>Kids' Corner</h3><p>Young readers welcome - Tintin to Calvin &amp; Hobbes.</p></div></div></section>
+<section id="plans"><h2>Reading Plans</h2><p class="sub">Walk in hourly or go full member. Confirm current rates in-store.</p><div class="plans"><div class="plan"><h3>Walk-in Hour</h3><div class="pr">₹60<span style="font-size:1rem">/hr</span></div><ul><li>Bat-Cave access</li><li>All 5000+ titles</li><li>Cafe ordering to your beanbag</li></ul><a class="btn" href="#visit">Just Walk In</a></div><div class="plan hot"><h3>Annual Member</h3><div class="pr">~₹4,500<span style="font-size:1rem">/yr</span></div><ul><li>Borrow + home delivery (Mumbai)</li><li>Member-only previews</li><li>Event invites</li></ul><a class="btn" href="#visit">Ask About Plans</a></div><div class="plan"><h3>Short Plans</h3><div class="pr">3 / 6 mo</div><ul><li>Same borrowing rights</li><li>Shorter commitment</li><li>Giftable!</li></ul><a class="btn" href="#visit">Ask About Plans</a></div></div></section>
+<section id="cafe"><h2>Cafe Crowd-Pleasers</h2><p class="sub">Reviewer-approved. ₹400-ish per person. Full menu in-store.</p><div class="dishes"><div class="dish"><div><b>Loaded Nachos</b><br><small>Most-reviewed plate in the house</small></div></div><div class="dish"><div><b>Chicken Skewers</b><br><small>Charred &amp; crowd-safe</small></div></div><div class="dish"><div><b>Cajun Chicken Burger</b><br><small>"Ordered it twice" - a review</small></div></div><div class="dish"><div><b>Pancakes</b><br><small>Fluffy, no notes</small></div></div><div class="dish"><div><b>Vietnamese Coffee</b><br><small>"Hit the spot"</small></div></div><div class="dish"><div><b>Oreo Shake + Caramel Milkshake</b><br><small>Double trouble</small></div></div><div class="dish"><div><b>Chicken Steak w/ Crispy Potato</b><br><small>Hearty reader fuel</small></div></div><div class="dish"><div><b>Pizza · Pasta · Wings · Beer</b><br><small>The extended universe</small></div></div></div></section>
+<section id="gallery"><h2>Proof of Vibe</h2><div class="strip"><img loading="lazy" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80&auto=format&fit=crop" alt="Books"><img loading="lazy" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80&auto=format&fit=crop" alt="Cafe food"><img loading="lazy" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80&auto=format&fit=crop" alt="Reading"><img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format&fit=crop" alt="Cafe counter"></div></section>
+<div class="quotes"><blockquote id="qq">"123 reviewers mention the comic books. That tells you everything."</blockquote><small>— 4.5 from 2216 Google reviews</small></div>
+<section id="visit"><h2>Find the Cave</h2><p class="sub">Corner View 3, Dr. Ashok Chopra Marg, opp. Bianca Towers, Versova, Andheri West 400061 · 097699 98972 · Open till 12:30am</p><div class="visit"><iframe loading="lazy" title="Leaping Windows map" src="https://www.google.com/maps?q=Leaping%20Windows%20Versova%20Andheri%20West%20Mumbai&output=embed" allowfullscreen></iframe><div class="vcard"><h3>Bat-Cave hours</h3><table><tr><td>Cafe</td><td style="text-align:right"><b>Till 12:30am</b></td></tr><tr><td>Reading room</td><td style="text-align:right">~₹60/hr walk-in</td></tr><tr><td>Dine-in · Takeaway · Delivery</td><td style="text-align:right">Yes</td></tr></table><br><a class="btn" href="tel:09769998972">Call 097699 98972</a> <a class="btn dark" href="https://www.google.com/maps?q=Leaping%20Windows%20Versova%20Andheri%20West%20Mumbai" target="_blank" rel="noopener">Directions</a></div></div></section>
+<footer>Leaping Windows · Versova, Andheri West · © 2026 · Demo site - reply to claim</footer>
 <script>
-var lines=["$ leaping-windows init","✓ scope locked: 7 days, fixed price","$ design draft → preview link ready","✓ client approved in 1 round","$ build + deploy --prod","✓ live: https://client-site.example","$ uptime 99.9% — sipping chai"];var pre=document.getElementById('code');var li=0,ci=0;function tick(){if(li>=lines.length){setTimeout(function(){pre.innerHTML='';li=0;ci=0;tick()},4000);return}var cur=lines[li].slice(0,++ci);pre.innerHTML=lines.slice(0,li).join('\n')+(li?'\n':'')+cur+'<span class="cur"></span>';if(ci>=lines[li].length){li++;ci=0;setTimeout(tick,700)}else setTimeout(tick,28)}tick();
-var qs=["Delivered in six days. Our old site took six months.","They explain tech like humans. Rare.","Support actually replies. Imagine that."];var qi=0;var qel=document.getElementById('qq');setInterval(function(){qel.style.opacity=0;setTimeout(function(){qi=(qi+1)%qs.length;qel.innerText='"'+qs[qi]+'"';qel.style.opacity=1},450)},4200);
-document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();var s='Project inquiry from '+document.getElementById('qn').value+' ('+document.getElementById('qe').value+'): '+document.getElementById('qm').value;window.location.href='mailto:hello@leapingwindows.example?subject='+encodeURIComponent('Project inquiry')+'&body='+encodeURIComponent(s)});
+var qs=["123 reviewers mention the comic books. That tells you everything.","The Bat-Cave basement is a whole personality.","Nachos + manga = perfect Saturday.","Staff picks never miss."];var qi=0;var qel=document.getElementById('qq');setInterval(function(){qel.style.opacity=0;setTimeout(function(){qi=(qi+1)%qs.length;qel.innerText='"'+qs[qi]+'"';qel.style.opacity=1},450)},4200);
 </script></body></html>
