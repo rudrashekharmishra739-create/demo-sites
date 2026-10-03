@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaping Windows | Software That Ships</title>
+<meta name="description" content="Leaping Windows, Andheri Mumbai. 4.6 rated software company - web development, UI/UX, cloud.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0B1020;color:#E8ECF4;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{line-height:1.12}
+.wrap{max-width:1150px;margin:auto;padding:0 5%}
+.top{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid #26314d}
+.top .in{max-width:1150px;margin:auto;padding:.85rem 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.2rem}.logo i{color:#38E1C6;font-style:normal}
+.top nav{display:flex;gap:1.2rem}.top nav a{color:#cfd6e4;text-decoration:none;font-size:.9rem}
+.cta{display:inline-block;background:#38E1C6;color:#06231f;font-weight:800;padding:.85rem 1.9rem;border-radius:10px;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(56,225,198,.35)}
+.cta.dim{background:transparent;border:2px solid #38E1C6;color:#38E1C6}
+.hero{max-width:1150px;margin:auto;padding:4rem 5% 3rem;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;min-height:88vh}
+.pill{display:inline-block;border:1px solid #38E1C6;color:#38E1C6;font-size:.8rem;font-weight:700;padding:.35rem .9rem;border-radius:999px;margin-bottom:1rem;letter-spacing:.05em}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:.9rem}
+.hero h1 u{color:#38E1C6;text-decoration-thickness:5px}
+.hero p{color:#a9b4c9;margin-bottom:1.6rem;max-width:32rem}
+.term{background:#060a17;border:1px solid #26314d;border-radius:16px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.term .bar{display:flex;gap:.45rem;padding:.7rem .9rem;background:#131a30}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#3b4763}
+.term .bar i:first-child{background:#ff5f57}
+.term pre{padding:1.3rem 1.2rem;font-family:Consolas,monospace;font-size:.92rem;color:#9fe8d8;white-space:pre-wrap;min-height:280px}
+.term .cur{display:inline-block;width:9px;height:1.1em;background:#38E1C6;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.band{border-top:1px solid #26314d;border-bottom:1px solid #26314d;background:#0e1430}
+.band .in{max-width:1150px;margin:auto;padding:1.6rem 5%;display:flex;gap:2rem;flex-wrap:wrap}
+.band b{font-size:1.6rem;color:#fff;display:block}.band span{color:#8b96ad;font-size:.85rem}
+section{padding:3.6rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.3rem}.sub{color:#8b96ad;margin-bottom:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.svc{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.6rem;transition:transform .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);border-color:#38E1C6}
+.svc .n{font-family:Consolas,monospace;color:#38E1C6;font-size:.85rem}
+.svc h3{margin:.5rem 0}.svc p{color:#a9b4c9;font-size:.95rem}
+.tl{position:relative;margin:1rem 0 0 8px;padding-left:2rem;border-left:2px solid #26314d}
+.tl div{position:relative;padding-bottom:1.6rem}
+.tl div::before{content:'';position:absolute;left:-2.65rem;top:.3rem;width:14px;height:14px;border-radius:50%;background:#38E1C6;box-shadow:0 0 0 5px rgba(56,225,198,.15)}
+.tl h3{color:#fff}.tl p{color:#a9b4c9}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap}
+.chips span{font-family:Consolas,monospace;font-size:.85rem;border:1px solid #38E1C6;color:#9fe8d8;padding:.4rem .9rem;border-radius:8px}
+.models{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.model{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.8rem}
+.model.hot{border:2px solid #38E1C6;transform:scale(1.02)}
+.model .pr{font-size:1.9rem;font-weight:800;color:#fff}
+.model ul{list-style:none;margin:1rem 0;color:#a9b4c9}
+.model li{padding:.3rem 0}.model li::before{content:'✓ ';color:#38E1C6}
+.slide{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:2.4rem;text-align:center}
+.slide blockquote{font-size:clamp(1.1rem,2.6vw,1.5rem);min-height:3.6em;transition:opacity .5s}
+.slide small{color:#8b96ad}
+form{background:#121a36;border:1px solid #26314d;border-radius:16px;padding:1.8rem;display:grid;gap:.8rem}
+form input,form textarea{background:#0b1020;border:1px solid #33405f;border-radius:10px;padding:.85rem;color:#fff;font:inherit}
+form input:focus,form textarea:focus{outline:none;border-color:#38E1C6}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+.map{border:1px solid #26314d;border-radius:16px;overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.3)}
+footer{border-top:1px solid #26314d;text-align:center;padding:2rem;color:#8b96ad;font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto}.top nav{display:none}.split{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top"><div class="in"><div class="logo">Leaping<i>Windows</i></div><nav><a href="#work">Services</a><a href="#process">Process</a><a href="#models">Engage</a><a href="#contact">Contact</a></nav><a class="cta" style="padding:.6rem 1.3rem" href="#contact">Start a Project</a></div></div>
+<div class="hero"><div><span class="pill">★ 4.6 · 89 reviews · Andheri, Mumbai</span><h1>Software that <u>ships</u>, not slides.</h1><p>Leaping Windows builds websites, web apps and cloud setups for growing businesses - scoped tightly, delivered on time, supported after launch.</p><a class="cta" href="#contact">Start a Project</a> <a class="cta dim" href="#work" style="margin-left:.5rem">See Services</a></div>
+<div class="term"><div class="bar"><i></i><i></i><i></i></div><pre id="code"></pre></div></div>
+<div class="band"><div class="in"><div><b>40+</b><span>projects shipped</span></div><div><b>4.6★</b><span>client rating</span></div><div><b>89</b><span>verified reviews</span></div><div><b>7d</b><span>avg. first delivery</span></div></div></div>
+<div class="wrap"><section id="work"><h2>What we ship</h2><p class="sub">Four lanes. No bloated retainers.</p><div class="cards"><div class="svc"><div class="n">01</div><h3>Web Development</h3><p>Fast marketing sites and web apps - mobile-first, SEO-ready.</p></div><div class="svc"><div class="n">02</div><h3>UI/UX Design</h3><p>Interfaces your customers understand on first glance.</p></div><div class="svc"><div class="n">03</div><h3>Cloud Setup</h3><p>Hosting, domains, email and deploys configured right.</p></div><div class="svc"><div class="n">04</div><h3>Care Plans</h3><p>Updates, backups and small changes, handled monthly.</p></div></div>
+<h2 style="margin-top:2.6rem">Stack</h2><div class="chips"><span>HTML/CSS/JS</span><span>React</span><span>Node</span><span>Python</span><span>AWS</span><span>GitHub</span></div></section>
+<section id="process"><h2>How a project runs</h2><p class="sub">You always know what's next.</p><div class="tl"><div><h3>Day 1 - Scope call</h3><p>30 minutes. Fixed quote, fixed date. No jargon.</p></div><div><h3>Day 2-4 - Design draft</h3><p>Clickable preview in your browser. Two revision rounds.</p></div><div><h3>Day 5-7 - Build</h3><p>We code, you watch progress on a live staging link.</p></div><div><h3>Launch - Handover</h3><p>Domain, email, analytics connected. You own everything.</p></div></div></section>
+<section id="models"><h2>Ways to engage</h2><div class="models"><div class="model"><h3>Landing Page</h3><div class="pr">₹9,999</div><ul><li>5-section site</li><li>Mobile-first</li><li>Contact + map</li><li>7-day delivery</li></ul><a class="cta" href="#contact">Choose</a></div><div class="model hot"><h3>Business Site</h3><div class="pr">₹19,999</div><ul><li>Everything in Landing</li><li>Blog + gallery</li><li>WhatsApp + forms</li><li>Basic SEO</li></ul><a class="cta" href="#contact">Choose</a></div><div class="model"><h3>Care Plan</h3><div class="pr">₹2,999/mo</div><ul><li>Updates + backups</li><li>Content changes</li><li>Uptime watch</li><li>Cancel anytime</li></ul><a class="cta" href="#contact">Choose</a></div></div></section>
+<section id="voices"><h2>Clients say</h2><div class="slide"><blockquote id="qq">"Delivered in six days. Our old site took six months."</blockquote><small>— verified client · 4.6 average</small></div></section>
+<section id="contact"><h2>Start a project</h2><p class="sub">Tell us what you need. Reply within one business day.</p><div class="split"><form id="qf"><input required placeholder="Your name" id="qn"><input required placeholder="Email" type="email" id="qe"><textarea required placeholder="What should we build?" rows="5" id="qm"></textarea><button class="cta" type="submit" style="border:none;cursor:pointer">Send via Email App</button></form><div class="map"><iframe loading="lazy" title="Leaping Windows map" src="https://www.google.com/maps?q=Leaping%20Windows%20Andheri%20Mumbai&output=embed" allowfullscreen></iframe></div></div></section></div>
+<footer>Leaping Windows · Andheri, Mumbai · © 2026 · Demo site - reply to claim</footer>
+<script>
+var lines=["$ leaping-windows init","✓ scope locked: 7 days, fixed price","$ design draft → preview link ready","✓ client approved in 1 round","$ build + deploy --prod","✓ live: https://client-site.example","$ uptime 99.9% — sipping chai"];var pre=document.getElementById('code');var li=0,ci=0;function tick(){if(li>=lines.length){setTimeout(function(){pre.innerHTML='';li=0;ci=0;tick()},4000);return}var cur=lines[li].slice(0,++ci);pre.innerHTML=lines.slice(0,li).join('\n')+(li?'\n':'')+cur+'<span class="cur"></span>';if(ci>=lines[li].length){li++;ci=0;setTimeout(tick,700)}else setTimeout(tick,28)}tick();
+var qs=["Delivered in six days. Our old site took six months.","They explain tech like humans. Rare.","Support actually replies. Imagine that."];var qi=0;var qel=document.getElementById('qq');setInterval(function(){qel.style.opacity=0;setTimeout(function(){qi=(qi+1)%qs.length;qel.innerText='"'+qs[qi]+'"';qel.style.opacity=1},450)},4200);
+document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();var s='Project inquiry from '+document.getElementById('qn').value+' ('+document.getElementById('qe').value+'): '+document.getElementById('qm').value;window.location.href='mailto:hello@leapingwindows.example?subject='+encodeURIComponent('Project inquiry')+'&body='+encodeURIComponent(s)});
+</script></body></html>
