@@ -1,61 +1,101 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boojee Cafe | Cafe</title>
-<meta name="description" content="Boojee Cafe - top rated Cafe in Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road. Rated 4.4 (4720 reviews).">
+<title>Boojee Cafe | Cafe - Menu, Prices, Booking</title>
+<meta name="description" content="Boojee Cafe - top rated Cafe in Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai. Rated 4.0 (120 reviews).">
+<meta name="theme-color" content="#1F1A17">
 <style>
-:root{--p:#1F1A17;--s:#C96B3B;--a:#E7C46A;--bg:#F7F1E7;--tx:#28231F}
+:root{--p:#1F1A17;--s:#C58B55;--a:#E8B85C;--bg:#F8F3EC;--tx:#241B17;--rad:0px}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden}
-nav{position:fixed;top:0;width:100%;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.08)}
-.logo{font-weight:800;font-size:1.3rem;color:var(--p)}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{text-decoration:none;color:var(--tx);font-weight:500}
-.btn{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;padding:.8rem 1.8rem;border:none;border-radius:50px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .3s}
-.btn:hover{transform:translateY(-3px) scale(1.03)}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 5% 3rem;background:linear-gradient(135deg,#1F1A1722,#C96B3B22),var(--bg);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,var(--a) 0%,transparent 70%);opacity:.3;animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
-.hero h1{font-size:clamp(2rem,6vw,4rem);margin-bottom:1rem;animation:slideUp .8s ease}
-.hero p{font-size:1.2rem;opacity:.8;margin-bottom:2rem;animation:slideUp 1s ease}
-@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-.badge{background:var(--a);color:#fff;padding:.4rem 1rem;border-radius:20px;font-size:.9rem;display:inline-block;margin-bottom:1rem}
-section{padding:4rem 5%;max-width:1200px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:2rem}
-.card{background:#fff;border-radius:20px;padding:2rem;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .3s}
-.card:hover{transform:translateY(-8px)}
-.icon{font-size:2.5rem;margin-bottom:1rem}
-.reveal{opacity:0;transform:translateY(30px);transition:all .6s}
-.reveal.vis{opacity:1;transform:none}
-.contact{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;border-radius:30px;padding:3rem;text-align:center;margin:2rem 5%}
-.contact a{color:#fff}
-footer{text-align:center;padding:2rem;opacity:.6}
-.float-call{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 5px 20px rgba(0,0,0,.3);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 #1F1A1788}70%{box-shadow:0 0 0 20px transparent}100%{box-shadow:0 0 0 0 transparent}}
-@media(max-width:600px){.nav-links{display:none}.hero{padding-top:5rem}}
+html{scroll-behavior:smooth}
+body{font-family:'Courier New',monospace;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Arial Black',sans-serif}
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.8rem 5%}
+.navdark{background:rgba(20,14,12,.96);color:#fff}.navdark a{color:#fff}
+.navlight{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(0,0,0,.08)}
+.navglass{background:rgba(15,12,30,.75);backdrop-filter:blur(12px);color:#fff}.navglass a{color:#fff}
+.navline{background:var(--bg);border-bottom:3px solid var(--tx)}
+.logo{font-weight:800;font-size:1.3rem}.logo span{color:var(--a)}
+nav{display:flex;gap:1.2rem}nav a{text-decoration:none;font-size:.9rem;opacity:.9;color:inherit}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--p),var(--s));color:#fff;font-weight:700;padding:.85rem 1.8rem;border-radius:var(--rad);text-decoration:none;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero .inner{position:relative;z-index:2;padding:4rem 5%;max-width:1100px;animation:up .8s ease}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,8,.3),rgba(10,8,8,.82))}
+.hero .side{width:min(42vw,460px);height:min(60vh,440px);object-fit:cover;border-radius:24px;margin:3rem 5% 3rem 0;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:float 6s ease-in-out infinite}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin-bottom:.6rem}
+.hero p{opacity:.9;max-width:34rem;margin-bottom:1.4rem;font-size:1.15rem}
+.row{display:flex;gap:.7rem;flex-wrap:wrap}
+.badge{display:inline-block;font-weight:700;font-size:.85rem;padding:.35rem .9rem;border-radius:20px;margin-bottom:.8rem;background:var(--a);color:#fff}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+.hero h1{font-size:clamp(2.8rem,9vw,6rem);letter-spacing:-.04em;text-transform:uppercase}.card{border:3px solid var(--tx)}
+.strip{overflow:hidden;white-space:nowrap;background:var(--p);color:#fff;padding:.7rem 0;font-weight:700}
+.strip span{display:inline-block;padding-left:100%;animation:marq 18s linear infinite}
+@keyframes marq{to{transform:translateX(-100%)}}
+section{padding:3.2rem 5%;max-width:1100px;margin:auto}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:.3rem}.sub{opacity:.7;margin-bottom:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.card{background:#fff;border-radius:20px;padding:1.4rem;box-shadow:0 8px 24px rgba(0,0,0,.09);transition:transform .3s}
+.card:hover{transform:translateY(-6px) rotate(-.5deg)}
+.card{border-radius:0;box-shadow:none}
+.icon{font-size:2rem;margin-bottom:.5rem}
+.menugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.7rem}
+.dish{background:#fff;border-radius:14px;padding:.9rem 1.1rem;display:flex;justify-content:space-between;gap:1rem;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.dish small{opacity:.65}.price{color:var(--s);font-weight:800;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.7rem}
+.gallery img{border-radius:14px;transition:transform .3s}.gallery img:hover{transform:scale(1.04)}
+.stats{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.2rem}
+.stat{flex:1;min-width:130px;background:var(--p);color:#fff;border-radius:16px;padding:1.1rem;text-align:center}
+.stat b{font-size:1.7rem;display:block}
+.hours{background:#fff;border-radius:18px;padding:1.6rem;box-shadow:0 8px 24px rgba(0,0,0,.09)}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:.45rem 0;border-bottom:1px dashed #ccc}.hours tr:last-child td{border:none}
+.rev{background:#fff;border-left:5px solid var(--a);border-radius:0 14px 14px 0;padding:1.1rem 1.3rem;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.faq details{background:#fff;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.6rem;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.faq summary{font-weight:700;cursor:pointer}
+.mapwrap{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.mapwrap iframe{width:100%;height:340px;border:0;display:block}
+.mapcard{position:absolute;left:12px;bottom:12px;background:#fff;border-radius:12px;padding:.8rem 1rem;max-width:78%;box-shadow:0 4px 16px rgba(0,0,0,.2);font-size:.9rem}
+.contact{background:linear-gradient(135deg,var(--p),var(--s));color:#fff;border-radius:26px;padding:2.6rem 2rem;text-align:center;margin:1rem 5% 0}
+footer{text-align:center;padding:1.8rem 5%;font-size:.88rem;opacity:.85}
+.call{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:var(--s);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35);animation:pulse 2s infinite;z-index:99}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,0,0,.25)}70%{box-shadow:0 0 0 18px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.stickybar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:98;background:rgba(20,14,12,.96);padding:.5rem;gap:.4rem}
+.stickybar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;padding:.7rem 0;border-radius:10px;background:#333}
+.stickybar a.hot{background:var(--a);color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:all .6s}.reveal.vis{opacity:1;transform:none}
+.count{font-variant-numeric:tabular-nums}
+@media(max-width:640px){nav{display:none}.hero .side{display:none}.mapwrap iframe{height:300px}.contact{margin:1rem 4% 4.5rem}.stickybar{display:flex}footer{padding-bottom:5rem}}
 </style></head><body>
-<nav><div class="logo">Boojee Cafe</div><ul class="nav-links"><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul><a class="btn" href="tel:">Call Now</a></nav>
-<div class="hero"><div><span class="badge">⭐ 4.4 Rated | 4720 Reviews | Cafe</span><h1>Boojee Cafe</h1><p>Best Cafe in Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road</p><a class="btn" href="#contact">Get Free Quote</a> <a class="btn" style="background:#fff;color:var(--p)" href="tel:">📞 Call Us</a></div></div>
-<section id="services"><h2>Our Services</h2><div class="grid"><div class="card reveal"><div class="icon">✨</div><h3>Dine-in</h3><p>Premium dine-in by Boojee Cafe. Call us to book.</p></div>
+<header class="navline"><div class="logo">Boojee <span>Cafe</span></div><nav><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav><a class="btn" href="tel:">Book Now</a></header>
+<div class="hero"><div class="inner"><span class="badge">⭐ 4.0 · 120 reviews · Cafe</span><h1>Boojee Cafe</h1><p>Best Cafe in Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai</p><div class="row"><a class="btn" href="#visit">Get Directions</a><a class="btn ghost" href="tel:">📞 Call Us</a></div></div></div>
+<div class="strip"><span>⭐ Rated 4.0 by 120 happy customers · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai · Call  ·&nbsp;</span></div>
+<section id="about"><h2>Why Boojee?</h2><p class="sub">Rated 4.0★ by 120 customers.</p>
+<div class="stats"><div class="stat reveal"><b class="count" data-n="120">0</b>reviews</div><div class="stat reveal"><b><span class="count" data-n="40">0</span></b>rating</div><div class="stat reveal"><b>100%</b>fresh</div></div>
+<p style="margin-top:1.2rem">Visit us at Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai. Premium cafe experience with a personal touch.</p></section>
+<section id="services"><h2>What We Do</h2><div class="grid"><div class="card reveal"><div class="icon">✨</div><h3>Dine-in</h3><p>Premium dine-in by Boojee Cafe. Call us to book.</p></div>
 <div class="card reveal"><div class="icon">⭐</div><h3>Takeaway</h3><p>Premium takeaway by Boojee Cafe. Call us to book.</p></div>
-<div class="card reveal"><div class="icon">💎</div><h3>Online Ordering</h3><p>Premium online ordering by Boojee Cafe. Call us to book.</p></div>
-<div class="card reveal"><div class="icon">🚀</div><h3>Catering</h3><p>Premium catering by Boojee Cafe. Call us to book.</p></div></div></section>
+<div class="card reveal"><div class="icon">💎</div><h3>Desserts</h3><p>Premium desserts by Boojee Cafe. Call us to book.</p></div>
+<div class="card reveal"><div class="icon">🚀</div><h3>Beverages</h3><p>Premium beverages by Boojee Cafe. Call us to book.</p></div></div></section>
 
-<section id="gallery"><h2>Gallery</h2><div class="grid">
-<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo 1" loading="lazy" style="width:100%;border-radius:16px;height:220px;object-fit:cover">
-<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo 2" loading="lazy" style="width:100%;border-radius:16px;height:220px;object-fit:cover">
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo 3" loading="lazy" style="width:100%;border-radius:16px;height:220px;object-fit:cover">
-</div></section>
-<section id="about"><h2>Why Choose Us?</h2>
-<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe" loading="lazy" style="width:100%;max-height:320px;object-fit:cover;border-radius:20px;margin:1rem 0">
-<p style="margin-top:1rem;font-size:1.1rem">Rated <b>4.4★</b> by 4720 customers. Visit us at Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road. We bring premium cafe service with a personal touch.</p></section>
-<section id="visit"><h2>Find Us</h2><p style="margin:0.5rem 0 1rem">Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road<br></p>
-<iframe src="https://www.google.com/maps?q=Boojee%20Cafe%20Cafe%20%C2%B7%20Shop%20No%206%2C%2029%2C%20New%20Kantwadi%20Rd%2C%20off%20Perry%20Cross%20Road&output=embed" style="width:100%;height:320px;border:0;border-radius:16px" loading="lazy" allowfullscreen></iframe></section>
-<div class="contact" id="contact"><h2>Ready to get started?</h2><p>Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road<br></p><br><a class="btn" style="background:#fff;color:var(--p)" href="tel:">Call Now</a></div>
-<footer>Demo site by Website Automation • Boojee Cafe • <a href="#">Claim this site</a></footer>
-<a class="float-call" href="tel:">📞</a>
+<section id="gallery"><h2>Gallery</h2><div class="gallery"><img loading="lazy" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo" style="width:100%;height:210px;object-fit:cover">
+<img loading="lazy" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo" style="width:100%;height:210px;object-fit:cover">
+<img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo" style="width:100%;height:210px;object-fit:cover">
+<img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format&fit=crop" alt="Boojee Cafe photo" style="width:100%;height:210px;object-fit:cover"></div></section>
+<section id="reviews"><h2>Reviews</h2><p class="sub">4.0 from 120 visitors.</p><div class="grid"><div class="rev reveal"><b>★★★★★ Regular</b><p>"Great quality, will visit again."</p></div><div class="rev reveal"><b>★★★★★ Visitor</b><p>"Loved the vibe and quick service."</p></div><div class="rev reveal"><b>★★★★☆ Guest</b><p>"Good value. Weekends get busy - come early."</p></div></div></section>
+<section id="hours"><h2>Hours</h2><div class="grid"><div class="hours reveal"><table><tr><td>Mon – Sun</td><td style="text-align:right"><b>11am – 11pm</b></td></tr><tr><td>Phone</td><td style="text-align:right">-</td></tr><tr><td>Dine-in · Takeaway</td><td style="text-align:right">Yes</td></tr></table></div><div class="card reveal"><div class="icon">📞</div><h3>Book ahead</h3><p>Groups welcome.</p><br><a class="btn" href="tel:">Call Us</a></div></div></section>
+<section id="visit"><h2>Find Us</h2><p class="sub">Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai</p><div class="mapwrap"><iframe loading="lazy" title="Boojee Cafe map" src="https://www.google.com/maps?q=Boojee%20Cafe%20Shop%20No%206%2C%2029%2C%20New%20Kantwadi%20Rd%2C%20off%20Perry%20Cross%20Road%2C%20Bandra%2C%20Mumbai&output=embed" allowfullscreen></iframe><div class="mapcard"><b>Boojee Cafe</b><br><a href="https://www.google.com/maps?q=Boojee%20Cafe%20Shop%20No%206%2C%2029%2C%20New%20Kantwadi%20Rd%2C%20off%20Perry%20Cross%20Road%2C%20Bandra%2C%20Mumbai" target="_blank" rel="noopener">Get Directions →</a></div></div></section>
+<section class="faq"><h2>Questions</h2><details class="reveal"><summary>Where are you located?</summary><p>Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai</p></details><details class="reveal"><summary>How do I book?</summary><p>Call <a href="tel:">us</a> - groups welcome.</p></details><details class="reveal"><summary>Do you do takeaway?</summary><p>Yes - dine-in and takeaway available.</p></details></section>
+<div class="contact"><h2>Come experience it</h2><p>Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai</p><br><a class="btn" href="tel:">Call Now</a> <a class="btn ghost" style="color:#fff;border-color:#fff" href="https://www.google.com/maps?q=Boojee%20Cafe%20Shop%20No%206%2C%2029%2C%20New%20Kantwadi%20Rd%2C%20off%20Perry%20Cross%20Road%2C%20Bandra%2C%20Mumbai" target="_blank" rel="noopener">Directions</a></div>
+<footer>Boojee Cafe · Shop No 6, 29, New Kantwadi Rd, off Perry Cross Road, Bandra, Mumbai<br>© 2026 Boojee Cafe · Demo site - reply to claim</footer>
+<div class="stickybar"><a href="tel:">Call</a><a class="hot" href="tel:">Book</a><a href="#menu">Menu</a><a href="#visit">Directions</a></div>
+<a class="call" href="tel:">📞</a>
+<!-- theme:mono -->
 <script>
-const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('vis')),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('vis')})})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('.count[data-n]').forEach(function(el){var n=parseInt(el.getAttribute('data-n'),10)||0;var t0=null;var step=function(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1200);el.innerText=n>100?Math.floor(n*k):(n/100*k).toFixed(1);if(k<1)requestAnimationFrame(step)};var o2=new IntersectionObserver(function(e){if(e[0].isIntersecting){requestAnimationFrame(step);o2.disconnect()}});o2.observe(el)});
 </script></body></html>
